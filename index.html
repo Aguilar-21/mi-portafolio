@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ✏️ EDITA: título que aparece en la pestaña del navegador -->
+  <title>José Santos Aguilar Cruz | Portafolio</title>
+  <meta name="description" content="Portafolio personal de José Santos Aguilar Cruz: proyectos, habilidades y contacto." />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <!-- ============ PRESENTACIÓN ============ -->
+  <header class="portada">
+    <div class="contenedor">
+      <!-- ✏️ Tu foto: si agregas una imagen en la carpeta assets (ej. assets/foto.jpg),
+           reemplaza el <div class="avatar"> por:
+           <img class="avatar" src="assets/foto.jpg" alt="Foto de José Santos Aguilar Cruz" /> -->
+      <div class="avatar" aria-hidden="true">JA</div>
+
+      <h1>José Santos Aguilar Cruz</h1>
+      <p class="rol">Desarrollador web · Estudiante de Ingeniería</p>
+      <p class="ubicacion">Venezuela</p>
+
+      <nav class="enlaces" aria-label="Enlaces principales">
+        <!-- ✏️ EDITA tus enlaces reales -->
+        <a href="https://github.com/Aguilar-21" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:josesantosaguilarcruz546@gmail.com">Correo</a>
+        <!-- <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" rel="noopener">LinkedIn</a> -->
+        <a href="#proyectos">Proyectos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- ============ SOBRE MÍ ============ -->
+    <section class="seccion" aria-labelledby="titulo-sobre-mi">
+      <div class="contenedor">
+        <h2 id="titulo-sobre-mi">Sobre mí</h2>
+        <!-- ✏️ EDITA: escribe de 2 a 3 frases sobre ti, qué haces y qué te gusta -->
+        <p>
+          Soy estudiante y desarrollador en formación, interesado en crear
+          soluciones web claras, rápidas y fáciles de usar. Disfruto aprender
+          nuevas tecnologías y convertir ideas en proyectos reales.
+        </p>
+        <p>
+          Actualmente practico con HTML, CSS, JavaScript y Git, y estoy
+          construyendo mi portafolio para mostrar lo que sé hacer.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ HABILIDADES ============ -->
+    <section class="seccion seccion-alterna" aria-labelledby="titulo-habilidades">
+      <div class="contenedor">
+        <h2 id="titulo-habilidades">Habilidades</h2>
+        <!-- ✏️ EDITA: agrega o quita etiquetas según lo que manejes -->
+        <ul class="etiquetas">
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>Git y GitHub</li>
+          <li>Diseño responsive</li>
+          <li>Python</li>
+          <li>SQL</li>
+          <li>Linux</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ PROYECTOS ============ -->
+    <section class="seccion" id="proyectos" aria-labelledby="titulo-proyectos">
+      <div class="contenedor">
+        <h2 id="titulo-proyectos">Proyectos</h2>
+        <p class="nota">
+          Reemplaza estas tarjetas por tus proyectos reales. Lo ideal es mostrar
+          entre 3 y 4, con una captura, una breve explicación y el enlace al
+          repositorio o al sitio en vivo.
+        </p>
+
+        <div class="rejilla-proyectos">
+          <!-- ✏️ EDITA cada tarjeta -->
+          <article class="tarjeta">
+            <h3>Sistema de Alarmas</h3>
+            <p>
+              Aplicación para gestionar el estado de alarmas con métodos de
+              activación y desactivación. Documenté el diseño y la lógica del
+              sistema.
+            </p>
+            <ul class="tecnologias">
+              <li>Python</li>
+              <li>Diseño de software</li>
+            </ul>
+            <a class="boton" href="#" aria-disabled="true">Ver repositorio</a>
+          </article>
+
+          <article class="tarjeta">
+            <h3>Torre de Hanoi</h3>
+            <p>
+              Implementación del clásico juego con resolución automática,
+              poniendo en práctica recursividad y estructuras de datos.
+            </p>
+            <ul class="tecnologias">
+              <li>Lógica</li>
+              <li>Algoritmos</li>
+            </ul>
+            <a class="boton" href="#" aria-disabled="true">Ver repositorio</a>
+          </article>
+
+          <article class="tarjeta">
+            <h3>Mi portafolio</h3>
+            <p>
+              Este mismo sitio: una página estática, responsive y sin
+              dependencias, publicada con GitHub y Vercel.
+            </p>
+            <ul class="tecnologias">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Vercel</li>
+            </ul>
+            <a class="boton" href="https://github.com/Aguilar-21/mi-portafolio" target="_blank" rel="noopener">
+              Ver repositorio
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="seccion seccion-alterna" id="contacto" aria-labelledby="titulo-contacto">
+      <div class="contenedor">
+        <h2 id="titulo-contacto">Contacto</h2>
+        <p>
+          ¿Tienes una propuesta, una pregunta o quieres trabajar conmigo?
+          Escríbeme y te respondo lo antes posible.
+        </p>
+        <p class="acciones">
+          <!-- ✏️ EDITA tu correo -->
+          <a class="boton boton-principal" href="mailto:josesantosaguilarcruz546@gmail.com">Enviar correo</a>
+          <a class="boton" href="https://github.com/Aguilar-21" target="_blank" rel="noopener">Ver GitHub</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p>© <span id="anio">2026</span> José Santos Aguilar Cruz. Hecho con HTML y CSS.</p>
+    </div>
+  </footer>
+
+  <!-- Año automático en el pie de página -->
+  <script>
+    document.getElementById("anio").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

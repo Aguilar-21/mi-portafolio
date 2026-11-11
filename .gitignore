@@ -1,0 +1,10 @@
+# Archivos del sistema y del editor que no deben subirse
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Configuración local de VS Code (opcional)
+.vscode/
+
+# Dependencias de Node, por si más adelante usas npm
+node_modules/

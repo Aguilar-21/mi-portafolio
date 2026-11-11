@@ -1,0 +1,345 @@
+/* ============================================================
+   Hoja de estilos del portafolio
+   ✏️ EDITA sobre todo las variables de abajo para cambiar
+      los colores y el ancho del contenido.
+   ============================================================ */
+
+:root {
+  --color-fondo: #f7f9fc;
+  --color-superficie: #ffffff;
+  --color-texto: #1b2430;
+  --color-texto-suave: #56657a;
+  --color-borde: #e2e8f0;
+  --color-acento: #0f766e;
+  --color-acento-suave: #ccfbf1;
+  --color-oscuro: #101a26;
+
+  --ancho-contenido: 980px;
+  --radio: 14px;
+  --sombra: 0 10px 30px rgba(16, 26, 38, 0.08);
+
+  --fuente: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente);
+  line-height: 1.65;
+  color: var(--color-texto);
+  background: var(--color-fondo);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-acento);
+}
+
+a:focus-visible,
+.boton:focus-visible {
+  outline: 3px solid var(--color-acento);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.contenedor {
+  width: min(100% - 2.5rem, var(--ancho-contenido));
+  margin-inline: auto;
+}
+
+/* Enlace para saltar al contenido (accesibilidad) */
+.saltar {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--color-oscuro);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  z-index: 10;
+}
+
+.saltar:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+/* ============ Portada ============ */
+.portada {
+  background: var(--color-oscuro);
+  color: #ffffff;
+  padding: 4rem 0 3.5rem;
+  text-align: center;
+  border-bottom: 6px solid var(--color-acento);
+}
+
+.portada .rol {
+  color: #9fb3c8;
+  margin: 0.25rem 0 0;
+  font-size: 1.1rem;
+}
+
+.portada .ubicacion {
+  color: #7f94a8;
+  margin: 0.25rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+
+.avatar {
+  width: 132px;
+  height: 132px;
+  margin: 0 auto 1.25rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 2.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-acento-suave);
+  background: #1d2c3d;
+  border: 3px solid var(--color-acento);
+  object-fit: cover;
+  overflow: hidden;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.enlaces {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+}
+
+.enlaces a {
+  color: #ffffff;
+  text-decoration: none;
+  border: 1px solid #34495e;
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.enlaces a:hover {
+  background: #1d2c3d;
+  border-color: var(--color-acento);
+}
+
+/* ============ Secciones ============ */
+.seccion {
+  padding: 3.5rem 0;
+}
+
+.seccion-alterna {
+  background: var(--color-superficie);
+  border-top: 1px solid var(--color-borde);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+h2 {
+  font-size: clamp(1.4rem, 2.5vw, 1.75rem);
+  margin: 0 0 1rem;
+  letter-spacing: -0.01em;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 4px;
+  margin-top: 0.5rem;
+  border-radius: 999px;
+  background: var(--color-acento);
+}
+
+.seccion p {
+  color: var(--color-texto-suave);
+  max-width: 68ch;
+  margin: 0 0 1rem;
+}
+
+h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
+}
+
+.nota {
+  font-size: 0.95rem;
+  border-left: 4px solid var(--color-acento);
+  background: var(--color-acento-suave);
+  color: #115e59;
+  padding: 0.85rem 1rem;
+  border-radius: 0 var(--radio) var(--radio) 0;
+  margin-bottom: 2rem;
+}
+
+/* ============ Etiquetas (habilidades) ============ */
+.etiquetas {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding: 0;
+  margin: 0;
+}
+
+.etiquetas li {
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.9rem;
+  color: var(--color-texto);
+}
+
+/* ============ Proyectos ============ */
+.rejilla-proyectos {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+}
+
+.tarjeta {
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  padding: 1.4rem;
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(16, 26, 38, 0.12);
+}
+
+.tarjeta p {
+  margin: 0;
+  font-size: 0.97rem;
+}
+
+.tecnologias {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.tecnologias li {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #115e59;
+  background: var(--color-acento-suave);
+  border-radius: 6px;
+  padding: 0.15rem 0.5rem;
+}
+
+/* ============ Botones ============ */
+.boton {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-borde);
+  background: var(--color-superficie);
+  color: var(--color-texto);
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.boton:hover {
+  border-color: var(--color-acento);
+  color: var(--color-acento);
+}
+
+.boton-principal {
+  background: var(--color-acento);
+  border-color: var(--color-acento);
+  color: #ffffff;
+}
+
+.boton-principal:hover {
+  background: #0b5f59;
+  border-color: #0b5f59;
+  color: #ffffff;
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.acciones .boton {
+  margin-top: 0;
+}
+
+/* ============ Pie ============ */
+.pie {
+  background: var(--color-oscuro);
+  color: #9fb3c8;
+  padding: 1.75rem 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.pie p {
+  margin: 0;
+}
+
+/* ============ Móvil ============ */
+@media (max-width: 640px) {
+  .portada {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .seccion {
+    padding: 2.5rem 0;
+  }
+
+  .avatar {
+    width: 108px;
+    height: 108px;
+    font-size: 2.2rem;
+  }
+}
+
+/* Respeta a quien prefiere menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
